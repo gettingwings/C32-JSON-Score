@@ -59,9 +59,10 @@ function setup() {
 function draw() {
   
   //This is creating multiple images
-  if(bgImage)
+  //if(bgImage)
+    imageMode(CORNER)
     background(bgImage)
-
+  
   //imageMode(CENTER)
   //image(bgImage, width/2, height/2,width,height);
 
@@ -129,7 +130,7 @@ async function getBackgroundImage(){
 
   var hour = datetime.slice(11,13);
   //console.log(hour); 14
-
+  //hour +=7
   if(hour>=5 && hour<=19){
     bgImage = loadImage("sprites/bg.png");
   }else{
